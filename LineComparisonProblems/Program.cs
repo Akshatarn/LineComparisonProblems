@@ -24,16 +24,19 @@ namespace LineComparisonProblems
             var b = Math.Sqrt((Math.Pow(a1 - a2, 2) + Math.Pow(b1 - b2, 2)));
             Console.WriteLine("Length of line1 is :" + a);
             Console.WriteLine("Length of line2 is :" + b);
-            var result = Equals(a, b);
-            if (result == false)
+            int result = a.CompareTo(b);
+            if (result>0)
             {
-                Console.WriteLine("Ines are not equal");
+                Console.WriteLine("Length of line1 is greater than line2");
+            }
+            else if (result<0)
+            {
+                Console.WriteLine("Length of line1 is less than line2");
             }
             else
             {
-                Console.WriteLine("Lines are equal");
+                Console.WriteLine("Length of both the lines are equal");
             }
-            
             Console.ReadLine();
         }
     }
